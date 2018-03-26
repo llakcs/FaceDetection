@@ -37,7 +37,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile 'com.getkeepsafe.relinker:relinker:1.2.3'
-    implementation files('libs/opencv.jar')
-    implementation files('libs/javacv.jar')
-    implementation files('libs/javacpp.jar')
+    compile group: 'org.bytedeco', name: 'javacv', version: '1.4'
+    compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.2.0-1.4', classifier: 'android-arm'
+//    implementation files('libs/opencv.jar')
+//    implementation files('libs/javacv.jar')
+//    implementation files('libs/javacpp.jar')
 }

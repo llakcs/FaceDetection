@@ -49,6 +49,8 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.List;
 
+import static org.bytedeco.javacpp.avutil.AV_PIX_FMT_NV21;
+
 //import static org.bytedeco.javacpp.avutil.AV_PIX_FMT_NV21;
 
 /**
@@ -724,8 +726,8 @@ public class CvCameraPreview extends SurfaceView implements SurfaceHolder.Callba
             cameraFrame[1] = new Frame(width, height, Frame.DEPTH_UBYTE, 2);
         }
 
-//        filter = new FFmpegFrameFilter(transposeCode + "," + formatCode, width, height);
-//        filter.setPixelFormat(AV_PIX_FMT_NV21);
+        filter = new FFmpegFrameFilter(transposeCode + "," + formatCode, width, height);
+        filter.setPixelFormat(AV_PIX_FMT_NV21);
 
         Log.i(LOG_TAG, "filter initialize success");
     }

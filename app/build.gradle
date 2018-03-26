@@ -40,4 +40,5 @@ dependencies {
     implementation files('libs/opencv.jar')
     implementation files('libs/javacv.jar')
     implementation files('libs/javacpp.jar')
+    implementation files('libs/ffmpeg.jar')
 }

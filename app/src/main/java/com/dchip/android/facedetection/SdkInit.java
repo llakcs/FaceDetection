@@ -10,8 +10,6 @@ import com.getkeepsafe.relinker.ReLinker;
 
 public class SdkInit {
     public static void init(Application app){
-        ReLinker.recursively().loadLibrary(app,"opencv_core");
-        ReLinker.recursively().loadLibrary(app,"jniopencv_core");
-        ReLinker.recursively().loadLibrary(app,"opencv_imgproc");
+
     }
 }

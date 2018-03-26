@@ -3,6 +3,7 @@ package com.dchip.android.facedetection;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.util.Log;
 
 import com.dchip.android.facedetection.Manger.OpencvManager;
 import com.dchip.android.facedetection.utils.StorageHelper;
@@ -46,6 +47,9 @@ public class OpencvImpl implements OpencvManager {
             ism = true;
         }
         wr = new WeakReference<Context>(context);
+        if(wr.get() == null){
+            Log.e("opencvimp","###wr.get() == null");
+        }
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... voids) {

@@ -54,12 +54,12 @@ public class FaceDetection {
         }
         private static Application app;
         private static OpencvManager opencvManager;
-//        public static void init(Application app){
-//            if (Ext.app == null) {
-//                Ext.app = app;
-//            }
-////            SdkInit.init(Ext.app);
-//        }
+        public static void init(Application app){
+            if (Ext.app == null) {
+                Ext.app = app;
+            }
+            SdkInit.init(Ext.app);
+        }
 
         /**
          * 设置人面识别管理器
